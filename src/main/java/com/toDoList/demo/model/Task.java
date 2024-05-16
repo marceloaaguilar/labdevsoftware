@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "Tasks")
 @NoArgsConstructor
@@ -18,5 +20,9 @@ public class Task {
     private Long id;
     private String title;
     private String description;
+    private int type;
+    private Date date;
+    private int term;
+    private int priority;
     private Integer taskCompleted;
 }
