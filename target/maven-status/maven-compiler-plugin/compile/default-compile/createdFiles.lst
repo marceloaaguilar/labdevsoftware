@@ -1,0 +1,4 @@
+com\toDoList\demo\repository\TaskRepository.class
+com\toDoList\demo\controller\TaskController.class
+com\toDoList\demo\DemoApplication.class
+com\toDoList\demo\model\Task.class
