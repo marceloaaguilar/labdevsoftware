@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 body {
-    background: #b699ff;; /* Make it white if you need */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@ body {
     text-align: center;
 }
 h1 {
-    color: #fff;
+    color: #000000;
     margin-bottom: 0.5rem;
     font-size: 1.75rem;
 }
@@ -33,18 +32,18 @@ h1 {
 .todo-input {
     outline: none;
     background: none;
-    border: 1px solid #8758ff;
+    border: 1px solid #4486ff;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
     width: 300px;
-    color: #fff;
+    color: #000000;
 }
 .todo-input::placeholder {
     color: #ffffff4d;
 }
 .todo-btn {
-    background: #8758ff;
+    background: #4486ff;
     color: #fff;
     border: none;
     padding: 0.55rem;
@@ -54,7 +53,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #8758ff;
+    background: #4486ff;
     color: #fff;
     padding: 0.75rem 1rem;
     border-radius: 5px;
@@ -68,18 +67,22 @@ h1 {
     cursor: pointer;
 }
 .completed {
-    color: #c5aeff;
+    color: #4486ff;
     text-decoration: line-through;
     cursor: pointer;
 }
 .delete-icon {
     cursor: pointer;
+    color: white;
 }
 
 .Todo{
-    background-color: #8758ff;
-    padding: 1rem;
+    background-color: #4486ff;
     border-radius: 10px;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
 }
 
