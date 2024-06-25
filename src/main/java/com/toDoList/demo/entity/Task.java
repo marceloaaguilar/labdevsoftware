@@ -17,7 +17,7 @@ public class Task {
     private String description;
     private int type;
     private Date date;
-    private int term;
+    private Date term;
     private int priority;
     private Integer taskCompleted;
 
