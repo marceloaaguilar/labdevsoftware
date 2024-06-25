@@ -21,7 +21,7 @@ export const ToDoWrapper = () => {
 
     const deleteTodo = async (id) => {
         await httpTask.deleteTask(id);
-        setAllTasks();
+        window.location.reload();
         Swal.fire({title: "Tarefa Excluida", icon: "success"});
     };
 

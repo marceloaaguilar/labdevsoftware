@@ -11,6 +11,8 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
+import dayjs from 'dayjs';
+import { useNow } from "@mui/x-date-pickers/internals";
 
 export const TodoForm = ({addTodo}) => {
     const [value, setValue]             = useState('');
@@ -18,7 +20,7 @@ export const TodoForm = ({addTodo}) => {
     const [modalClose, setModalClose]   = useState(false);
     const [title, setTitle]             = useState('');
     const [description, setDescription] = useState('');
-    const [term, setTerm]               = useState('');
+    const [term, setTerm]               = useState(dayjs());
     const [type, setType]               = useState(null);
     const [priority, setPriority]       = useState('');
 
@@ -30,8 +32,7 @@ export const TodoForm = ({addTodo}) => {
             ,description
             ,type: type
             ,priority
-            ,term: 1
-            ,date: '2024-06-25'
+            ,term: term.toISOString().split('T')[0]
             ,taskCompleted: 0
         };
         await addTodo(task);
@@ -67,7 +68,7 @@ export const TodoForm = ({addTodo}) => {
                     <div>
                         <FormControl style={{marginTop: '1rem'}}>
                             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <DatePicker label={"Prazo Final"} />
+                                <DatePicker label={"Prazo Final"} value={term} />
                             </LocalizationProvider>
                         </FormControl>
 
@@ -101,7 +102,7 @@ export const TodoForm = ({addTodo}) => {
                             </Select>
                         </FormControl>
                     </div>
-                <Button variant="contained" onClick={handleSubmit} style={{marginTop:'2rem'}}>Adicionar Tarefa</Button>
+                    <Button variant="contained" onClick={handleSubmit} style={{marginTop:'2rem'}}>Adicionar Tarefa</Button>
                 </Box>
             </Modal>
         </div>

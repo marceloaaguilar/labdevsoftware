@@ -86,3 +86,13 @@ h1 {
     align-items: center;
 }
 
+.edit-icon{
+    cursor: pointer;
+    color: white;
+}
+
+.find-icon{
+    cursor: pointer;
+    color: white;
+    margin-right: 1rem;
+}

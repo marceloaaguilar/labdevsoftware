@@ -9,6 +9,9 @@ const httpTask = {
     },
     addTask(task){
         return axios.post(`/addTask`, task);
+    },
+    editTask(id, body){
+        return axios.post(`/updateTaskById/${id}`, body)
     }
 }
 
